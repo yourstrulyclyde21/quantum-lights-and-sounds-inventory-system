@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Quantum Inventory</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #6e7dff, #8e9eeb);
+      font-family: 'Arial', sans-serif;
+    }
+
+    .login-container {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 450px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .login-container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-section {
+      margin-bottom: 25px;
+      text-align: center;
+      background: #f5f7ff;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #e0e4f8;
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .about-section h3 {
+      font-size: 20px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .about-section p {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 24px;
+      color: #333;
+    }
+
+    .login-container img {
+      display: block;
+      margin: 0 auto 20px;
+      max-width: 100px;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: border-color 0.3s ease;
+    }
+
+    .login-container input:focus {
+      outline: none;
+      border-color: #6e7dff;
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      background-color: #6e7dff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .login-container button:hover {
+      background-color: #4f5bc7;
+      transform: translateY(-2px);
+    }
+
+    #errorMessage {
+      color: rgb(255, 0, 0);
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 480px) {
+      .login-container {
+        padding: 20px;
+      }
+
+      .login-container h2 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <!-- About Section at the top -->
+    <div class="about-section">
+      <h3>About Quantum Lights and Sounds</h3>
+      <p>
+        Quantum Lights and Sounds is your trusted partner in delivering professional lighting and sound systems
+        for events of all sizes. We specialize in high-quality equipment and technical support to ensure
+        every occasion is both memorable and seamless.
+      </p>
+    </div>
+
+    <img src="quantum.png" alt="Quantum Lights and Sounds Logo" />
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+    <p id="errorMessage"></p>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>

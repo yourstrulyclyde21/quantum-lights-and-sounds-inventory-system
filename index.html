@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inventory Management</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a href="/logout" class="logout-button">Logout</a>
+
+  <div class="main-layout">
+    <!-- Main Inventory Content -->
+    <div class="container">
+      <header>
+        <div class="header-content">
+          <!-- Logo -->
+          <img src="quantum.png" alt="Logo" class="logo" />
+          <h1>Quantum Lights & Sounds Inventory</h1>
+          <input type="text" id="searchBar" placeholder="Search..." class="search-bar" />
+        </div>
+      </header>
+
+      <!-- Inventory Form -->
+      <section class="form-section">
+        <form id="addForm">
+          <div class="form-grid">
+            <select id="category" required>
+              <option value="">Category</option>
+              <option value="Speakers">Speakers</option>
+              <option value="Microphones">Microphones</option>
+              <option value="Lights">Lights</option>
+              <option value="LED Wall">LED Wall</option>
+              <option value="XLR Cables">XLR Cables</option>
+              <option value="Mixer">Mixer</option>
+            </select>
+
+            <input
+              type="text"
+              id="brand"
+              placeholder="Brand"
+              required
+              pattern="[A-Za-z\s]{1,26}"
+              maxlength="26"
+              title="Letters only (max 26 characters)"
+            />
+
+            <input
+              type="text"
+              id="name"
+              placeholder="Name"
+              required
+              pattern="[A-Za-z\s]{1,26}"
+              maxlength="26"
+              title="Letters only (max 26 characters)"
+            />
+
+            <input
+              type="text"
+              id="serial"
+              placeholder="Serial Number"
+              required
+              pattern="[A-Za-z0-9\-]{1,30}"
+              maxlength="30"
+              title="Letters, numbers, and hyphens only (max 30 characters)"
+            />
+
+            <input
+              type="number"
+              id="stock"
+              placeholder="Stock"
+              required
+              min="0"
+              max="1000"
+              title="Enter a number between 0 and 1000"
+            />
+
+            <select id="status" required>
+              <option value="">Status</option>
+              <option value="Available">Available</option>
+              <option value="In-use">In-use</option>
+              <option value="For Repair">For Repair</option>
+            </select>
+
+            <button type="submit">Add Item</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Inventory List -->
+      <section class="list-section">
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Brand</th>
+              <th>Name</th>
+              <th>Serial Number</th>
+              <th>Stock</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="itemTableBody">
+            <!-- Inventory rows will appear here dynamically -->
+          </tbody>
+        </table>
+      </section>
+    </div>
+
+    <!-- Right-Side Notepad -->
+    <aside class="notepad">
+      <h2>Task Notes</h2>
+      <textarea id="taskNotes" placeholder="Write down schedules or tasks here..."></textarea>
+      <div class="button-container">
+        <button id="saveNotes">Save</button>
+        <button id="clearNotes">Clear</button>
+      </div>
+    </aside>
+  </div>
+</body>
+</html>
