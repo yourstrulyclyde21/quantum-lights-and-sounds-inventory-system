@@ -10,7 +10,7 @@ This is a simple inventory management system for Quantum Lights and Sounds, buil
 How to Run the System Locally
 Clone the repository
 
-git clone https://github.com/your-username/quantum-lights-and-sounds-inventory-system.git
+git clone https://github.com/yourstrulyclyde21/quantum-lights-and-sounds-inventory-system.git
 Navigate into the project folder
 
 cd quantum-lights-and-sounds-inventory-system
